@@ -6,22 +6,26 @@ import {
   Anybody_500Medium,
   Anybody_700Bold,
 } from '@expo-google-fonts/anybody';
-import * as SplashScreen from 'expo-splash-screen/';
 
-SplashScreen.preventAutoHideAsync();
+import { StatusBar } from 'expo-status-bar';
+import Container from './src/app/Container';
+import { SignIn } from './src/app/screens/SignIn';
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Anybody_400Regular,
-    Anybody_500Medium,
-    Anybody_700Bold,
+  const [isFontsLoaded] = useFonts({
+    Anybody: Anybody_400Regular,
+    Anybody_Medium: Anybody_500Medium,
+    Anybody_Bold: Anybody_700Bold,
   });
 
-  if (!fontsLoaded) return null;
+  if (!isFontsLoaded) return null;
 
   return (
-    <SafeAreaView>
-      <Text>Hello, world</Text>
-    </SafeAreaView>
+    <>
+      <StatusBar backgroundColor="transparent" />
+      <Container>
+        <SignIn />
+      </Container>
+    </>
   );
 }
