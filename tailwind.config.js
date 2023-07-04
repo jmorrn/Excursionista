@@ -9,9 +9,16 @@ module.exports = {
         anybodyBold: 'Anybody_Bold',
       },
       colors: {
-        brandRed: '#f50000',
-        brandBlack: '#263238',
-        brandWhite: '#f2f2f2',
+        black: {
+          brandBlack: '#263238',
+          brandBlack100: '#40525B',
+        },
+        red: {
+          brandRed: '#f50000',
+        },
+        white: {
+          brandWhite: '#f2f2f2',
+        },
       },
     },
   },
