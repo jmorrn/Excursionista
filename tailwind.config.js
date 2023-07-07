@@ -1,17 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
+const globalTheme = require('./src/styles/globalTheme.js');
 module.exports = {
-  content: [
-    './App.{js,jsx,ts,tsx}',
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
+  content: ['./App.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {
-      fontFamily: {
-        anybodyRegular: 'Anybody',
-        anybodyMedium: 'Anybody_Medium',
-        anybodyBold: 'Anybody_Bold',
-      }
-    },
+    extend: globalTheme,
   },
   plugins: [],
 };

@@ -1,0 +1,50 @@
+const globalTheme = {
+  fontFamily: {
+    anybodyRegular: 'Anybody',
+    anybodyMedium: 'Anybody_Medium',
+    anybodyBold: 'Anybody_Bold',
+  },
+  colors: {
+    'outer-space': {
+      50: '#f3f8f8',
+      100: '#e1eaec',
+      200: '#c6d8db',
+      300: '#9ebcc2',
+      400: '#6f97a1',
+      500: '#547c86',
+      600: '#486872',
+      700: '#3f565f',
+      800: '#394a51',
+      900: '#334046',
+      950: '#263238',
+    },
+    red: {
+      50: '#fff0f0',
+      100: '#ffdddd',
+      200: '#ffc0c0',
+      300: '#ff9494',
+      400: '#ff5757',
+      500: '#ff2323',
+      600: '#f50000',
+      700: '#d70000',
+      800: '#b10303',
+      900: '#920a0a',
+      950: '#500000',
+    },
+    concrete: {
+      50: '#f8f8f8',
+      100: '#f2f2f2',
+      200: '#e4e4e4',
+      300: '#d1d1d1',
+      400: '#b4b4b4',
+      500: '#9a9a9a',
+      600: '#818181',
+      700: '#6a6a6a',
+      800: '#5a5a5a',
+      900: '#4e4e4e',
+      950: '#282828',
+    },
+  },
+};
+
+module.exports = globalTheme;

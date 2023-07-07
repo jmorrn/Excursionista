@@ -22,7 +22,8 @@ export default function App() {
 
   return (
     <>
-      <StatusBar backgroundColor="transparent" />
+      <StatusBar translucent />
+
       <Container>
         <SignIn />
       </Container>
