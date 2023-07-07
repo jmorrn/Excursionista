@@ -13,12 +13,12 @@ export function Input({
   keyboardType,
   ...props
 }: InputPropTypes) {
-  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
+  const [isPasswordHidden, setIsPasswordHidden] = useState<boolean>(true);
   const [inputValue, setInputValue] = useState<string | undefined>(value);
   const [isFocused, setIsFocused] = useState<boolean>(false);
 
   function handlePasswordIsVisible() {
-    setIsPasswordVisible(!isPasswordVisible);
+    setIsPasswordHidden(!isPasswordHidden);
   }
 
   function handleIsFocused() {
@@ -46,7 +46,7 @@ export function Input({
         placeholder={placeholder}
         placeholderTextColor={globalTheme.colors['outer-space'][950]}
         selectionColor={globalTheme.colors['outer-space'][950]}
-        secureTextEntry={isPasswordVisible}
+        secureTextEntry={type === 'password' && isPasswordHidden}
         keyboardType={keyboardType}
         onChangeText={(insertedText) => setInputValue(insertedText)}
         hitSlop={{
@@ -65,7 +65,7 @@ export function Input({
           onPress={handlePasswordIsVisible}
           hitSlop={{ bottom: 8, top: 8, left: 8, right: 8 }}
         >
-          {isPasswordVisible ? (
+          {isPasswordHidden ? (
             <EyeClosed color="#263238" />
           ) : (
             <Eye color="#263238" />
